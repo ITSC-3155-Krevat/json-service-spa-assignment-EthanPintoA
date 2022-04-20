@@ -18,5 +18,13 @@ class Book(db.Model):
         self.author = author
         self.rating = rating
 
+    def to_dict(self):
+        return {
+            'bookId': self.book_id,
+            'title': self.title,
+            'author': self.author,
+            'rating': self.rating
+        }
+
     def __repr__(self) -> str:
         return f'Book({self.title}, {self.author}, {self.rating})'
