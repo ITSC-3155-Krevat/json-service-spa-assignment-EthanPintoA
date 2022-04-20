@@ -1,6 +1,4 @@
-from os import abort
-
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, abort, jsonify, request
 from src.models import Book, db
 
 book_router = Blueprint("book_router", __name__, url_prefix='/books')
